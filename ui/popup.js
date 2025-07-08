@@ -157,13 +157,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 document.getElementById('btn-notificaciones').onclick = function() {
-  window.location.href = 'notificaciones.html';
+  window.location.href = '../notification/notification.html';
 };
 document.getElementById('btn-configuracion').onclick = function() {
-  window.location.href = 'configuracion.html';
+  window.location.href = '../config/config.html';
 };
 document.getElementById('btn-ayuda').onclick = function() {
-  window.location.href = 'ayuda.html';
+  window.location.href = '../help/help.html';
 };
 document.getElementById('btn-inicio').onclick = function() {
   window.location.href = 'popup.html';

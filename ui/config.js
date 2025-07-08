@@ -3,9 +3,9 @@ const CONFIG = {
   // Configuración de navegación
   PAGES: {
     INICIO: 'popup.html',
-    NOTIFICACIONES: 'notificaciones.html',
-    CONFIGURACION: 'configuracion.html',
-    AYUDA: 'ayuda.html'
+    NOTIFICACIONES: 'notification/notification.html',
+    CONFIGURACION: 'config/config.html',
+    AYUDA: 'help/help.html'
   },
   
   // Configuración de estilos
