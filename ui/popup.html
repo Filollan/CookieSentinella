@@ -1,64 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>CookieSentinella</title>
-   <link rel="stylesheet" href="popup.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="components/shared/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body style="width:380px;min-height:587px;">
+  
+  <div id="layout-header"></div>
+
   <div class="popup-container">
-  <div class="popup-header">
-    <img src="../icons/icon48.png" alt="Logo CookieGuard" class="header-logo">
-    <h4>CookieSentinella</h4>
-  </div>
-  
-  <div class="statusBox" id="status">
-    <img src="../icons/escudoo.png" alt="Escudo protegido" id="statusIcon">
-    <span>Cargando estado...</span>
-  </div>
-  <div class="statusBox" id="sessionStatus">Verificando sesión...</div>
-  
-  <button id="toggleBtn">Activar protección/Desactivar protección</button>
-  <button id="cleanupBtn">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M3 6h18"></path>
-      <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-      <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-      <line x1="10" y1="11" x2="10" y2="17"></line>
-      <line x1="14" y1="11" x2="14" y2="17"></line>
-    </svg>
-    Limpiar Sesión
-  </button>
+    <!-- UI principal -->
+    <div class="statusBox" id="status">
+      <img src="icons/escudoo.png" alt="Escudo protegido" id="statusIcon" />
+      <span>Cargando estado...</span>
+    </div>
+    <div class="statusBox" id="sessionStatus">Verificando sesión...</div>
 
-  
-  <div id="error"></div>
+    <button id="toggleBtn">Activar protección/Desactivar protección</button>
+    <button id="cleanupBtn">
+      <!-- svg … -->
+      Limpiar Sesión
+    </button>
 
-</div> <!-- Cierre de .popup-container -->
+    <div id="error"></div>
+  </div>
 
-<!-- Menú de navegación inferior -->
-<div class="bottom-nav">
-  <div class="nav-btn" id="btn-inicio">
-    <img src="../icons/escudoo.png" alt="Inicio" width="24" height="24">
-    <span>Inicio</span>
-  </div>
-  <div class="nav-btn" id="btn-notificaciones">
-    <img src="../icons/campana.svg" alt="Notificaciones" width="24" height="24">
-    <span>Notificaciones</span>
-  </div>
-  <div class="nav-btn" id="btn-configuracion">
-    <img src="../icons/ajustes.svg" alt="Configuración" width="24" height="24">
-    <span>Configuración</span>
-  </div>
-  <div class="nav-btn" id="btn-ayuda">
-    <img src="../icons/ayuda.svg" alt="Centro de ayuda" width="24" height="24">
-    <span>Ayuda</span>
-  </div>
-</div>
+  <div id="layout-footer"></div>
 
-<script src="popup.js"></script>
-<script src="navigation.js"></script>
-
+  <!-- scripts -->
+  <script type="module" src="popup.js"></script>
+  <script type="module">
+    import { loadLayout } from './components/layout/layout.js';
+    // “inicio” será la pestaña activa en el footer
+    loadLayout('inicio');
+  </script>
 </body>
 </html>
