@@ -2,28 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>ayuda - CookieSentinella</title>
+  <title>Ayuda - CookieSentinella</title>
   <link rel="stylesheet" href="../components/shared/styles.css" />
+  <link rel="stylesheet" href="./help.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-<body style="width:380px;min-height:587px;">
-  
-  <!-- Header dinámico -->
+<body>
   <div id="layout-header"></div>
 
-  <!-- Contenido principal -->
   <div class="popup-container">
     <h3>Ayuda</h3>
-    <div id="ayuda-lista">
-      <p>Todavia no hay ayuda.</p>
+
+    <div class="help-section">
+      <button class="help-card" id="faq-btn">
+        <div class="icon">❓</div>
+        <span>Preguntas frecuentes</span>
+        <div class="arrow">›</div>
+      </button>
+
+      <button class="help-card" id="support-btn">
+        <div class="icon">🛠️</div>
+        <span>Soporte</span>
+        <div class="arrow">›</div>
+      </button>
+
+      <button class="help-card" id="report-btn">
+        <div class="icon">💬</div>
+        <span>Informar de un problema</span>
+        <div class="arrow">›</div>
+      </button>
     </div>
   </div>
 
-  <!-- Footer dinámico -->
   <div id="layout-footer"></div>
 
-  <!-- Scripts -->
-<script type="module" src="help.js"></script>
-
+  <script type="module" src="help.js"></script>
 </body>
 </html>
